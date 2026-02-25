@@ -1,0 +1,15 @@
+[build]
+publish = "."
+functions = "netlify/functions"
+
+[[redirects]]
+from = "/api/pi/approve"
+to = "/.netlify/functions/pi_approve"
+status = 200
+force = true
+
+[[redirects]]
+from = "/api/pi/complete"
+to = "/.netlify/functions/pi_complete"
+status = 200
+force = true

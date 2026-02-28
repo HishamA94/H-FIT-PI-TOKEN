@@ -1,34 +1,21 @@
 [build]
   publish = "."
-  command = "mkdir -p .well-known && cp .well-known/* .well-known/ || true"
   functions = "netlify/functions"
 
 [[redirects]]
-  from = "/api/pi/approve"
-  to = "/.netlify/functions/pi_approve"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/pi/complete"
-  to = "/.netlify/functions/pi_complete"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/.well-known/pi.toml"
-  to = "/.well-known/pi.toml"
+  to = "/well-known/pi.toml"
   status = 200
   force = true
 
 [[redirects]]
   from = "/.well-known/stellar.toml"
-  to = "/.well-known/stellar.toml"
+  to = "/well-known/stellar.toml"
   status = 200
   force = true
 
 [[headers]]
-  for = "/.well-known/*"
+  for = "/well-known/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "text/plain; charset=utf-8"

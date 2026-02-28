@@ -18,3 +18,13 @@ force = true
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Content-Type = "text/plain; charset=utf-8"
+    [[redirects]]
+  from = "/.well-known/pi.toml"
+  to = "/.well-known/pi.toml"
+  status = 200
+  force = true
+  [[redirects]]
+  from = "/.well-known/stellar.toml"
+  to = "/.well-known/stellar.toml"
+  status = 200
+  force = true

@@ -1,0 +1,8 @@
+{
+  "name": "donateway-dashboard",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "dependencies": {
+    "stellar-sdk": "^12.3.0"
+  }
+}
